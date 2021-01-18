@@ -16,15 +16,5 @@ spring:
       max-lifetime: 1800000
       connection-timeout: 30000
       connection-test-query: SELECT 1
-
-security:
-  oauth2:
-    client:
-      client-id: client
-      client-secret: secret
-      access-token-uri: http://localhost:8080/oauth/token
-      user-authorization-uri: http://localhost:8080/oauth/authorize
-    resource:
-      token-info-uri: http://localhost:8080/oauth/check_token
 server:
   port: 8081

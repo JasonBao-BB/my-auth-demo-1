@@ -5,6 +5,7 @@ import com.example.authorjdbcresource.service.WeaponService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public class WeaponController {
     WeaponService weaponService;
 
     @GetMapping(value = "")
+    @PreAuthorize("hasAnyRole('USER')")
     public ResponseEntity<List<Weapon>> findAllWeapons(){
         return new ResponseEntity<>(weaponService.findAll(), HttpStatus.OK);
     }

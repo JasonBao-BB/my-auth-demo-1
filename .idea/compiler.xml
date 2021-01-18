@@ -9,6 +9,7 @@
         <module name="my-auth-demo-1" />
         <module name="author-jdbc" />
         <module name="author-2" />
+        <module name="oauth2-demo" />
         <module name="author-jdbc-resource" />
       </profile>
     </annotationProcessing>
@@ -24,6 +25,7 @@
       <module name="author-jdbc-resource" options="-parameters" />
       <module name="authorization-server" options="-parameters" />
       <module name="authrize" options="-parameters" />
+      <module name="oauth2-demo" options="-parameters" />
     </option>
   </component>
 </project>
